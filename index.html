@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+    <title>缅华招聘助手</title>
+    <script>
+      // 只有在 Telegram 里打开时，才加载 Telegram 官方的小程序脚本（它提供返回键、主按钮、分享、主题色、用户信息等）。
+      // 普通浏览器和预览里不加载，避免多余的请求。必须在页面脚本之前同步加载，所以用 document.write。
+      var inTg = /tgWebApp/.test(location.hash + location.search) || !!window.TelegramWebviewProxy
+      try { if (inTg) sessionStorage.setItem('mh-in-tg', '1'); else inTg = sessionStorage.getItem('mh-in-tg') === '1' } catch (e) {} // 页面内跳转后地址里的标记会没，记一下
+      if (inTg) {
+        document.write('<script src="https://telegram.org/js/telegram-web-app.js"><\/script>')
+      }
+    </script>
+    <script type="module" crossorigin src="./assets/index-BwsOkERw.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-ZRBssTS-.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
